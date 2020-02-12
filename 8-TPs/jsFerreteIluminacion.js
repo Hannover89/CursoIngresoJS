@@ -11,4 +11,21 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio () 
 {
  	
+if (cantidad >= 6) {
+    descuento = 0.5;
+}  else if (cantidad == 5 && marca == "ArgentinaLuz") {
+    descuento = 0.4;
+}  else if (cantidad == 5) {
+    descuento = 0.3; 
+}  else if (cantidad == 4 && marca == "ArgentinaLuz" || marca == "FelipeLamparas") {
+    descuento = 0.25;
+}  else if (cantidad == 4) {
+    descuento = 0.2;
+}  else if (cantidad == 3 && marca == "ArgentinaLuz") {
+    descuento = 0.15; 
+}  else if (cantidad == 3 && marca == "FelipeLamparas") {
+    cantidad = 0.10;
+}  else 
+// es del 20%
+
 }
