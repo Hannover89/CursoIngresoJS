@@ -7,10 +7,12 @@ function mostrar()
 
 
 while (contador < 5) {
-	var numero = NaN;
+	var numero = prompt("Ingrese un numero");
+
+numero = parseInt(numero);
 
 	while (isNaN(numero)) { 
-	 numero = prompt("ingrese un numero");
+	 numero = prompt("Error: Ingrese un numero valido");
  
      numero = parseInt(numero);
  }

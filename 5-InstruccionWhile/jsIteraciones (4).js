@@ -1,14 +1,14 @@
 function mostrar()
 {
-var numero = 15;
+var numero = prompt("Ingrese un numero entre 0 y 10")
 
-while (numero < 0 || numero > 9 || isNaN(numero)) {
+while (numero < 1 || numero > 10 || isNaN(numero)) {
 numero = prompt("Ingrese un numero valido");
 
 	numero = parseInt(numero);
 
-	console.log(numero);
-	console.log(isNaN(numero));
+    alert("Numero ingresado correctamente.")
+	document.getElementById
 }
 
 }//FIN DE LA FUNCIÓN
