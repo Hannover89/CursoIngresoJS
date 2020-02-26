@@ -4,16 +4,19 @@ function mostrar()
 	var contador=0;
 	//declarar contadores y variables 
 	
-	var respuesta=true;
+    var respuesta=true;
     var sumaDePositivos = 0;
 	var contadorDePositivos = 0;
 	var sumaDeNegativos = 0;
     var contadorDeNegativos = 0;
-    var contadorCeros = 0;
+    var contadorDeCeros = 0;
     var contadorDePares = 0;
-    var promedioDePositivos;
-	var promedioDeNegativos;
-    var diferenciaPositivosYNegativos;
+    var promedioDePositivos = 0;
+	var promedioDeNegativos = 0;
+    var diferenciaPositivosYNegativos; 
+
+	acumuladorSuma = 0
+
 	
 	while(respuesta) {
 
@@ -28,32 +31,37 @@ function mostrar()
 
 		if (numero > 0) {
 			// punto 2
-			sumaPositivos += numero;
+			sumaDePositivos += numero;
 			// punto 3
-			contadorPositivos++;
+			contadorDePositivos++;
 		} else if (numero < 0) {
 			// punto 1
-			sumaNegativos += numero;
+			sumaDeNegativos += numero;
 		    // punto 4
-			contadorNegativos++;
-	} else { 
-			contadorCeros++;
+			contadorDeNegativos++;
+	    } else { 
+			contadorDeCeros++;
             // punto 5
 		} 
         
 		if (numero % 2 == 0) {
             contadorDePares++;
+			// punto 6
 		}
  	    
 		 respuesta = confirm("Desea continuar?");
-	} // fin while 
+	    } // fin while 
 
 
     // Punto 7
-	promedioDePositivos = sumaDePositivos / contadorDePositivos;
+	promedioDePositivos != sumaDePositivos / contadorDePositivos; {
+		promedioDePositivos = 0
+	}
 
 	// Punto 8
-	promedioDeNegativos = sumaDeNegativos / contadorDeNegativos;
+	promedioDeNegativos != sumaDeNegativos / contadorDeNegativos; {
+		promedioDeNegativos = 0
+	}
 
 	// Punto 9
     diferenciaPositivosYNegativos = sumaDePositivos - sumaDeNegativos;
@@ -64,7 +72,7 @@ function mostrar()
 	document.write("Suma de Negativos " + sumaDeNegativos + "<br>");
 	document.write("Contador de Positivos " + contadorDePositivos + "<br>");
 	document.write("Contador de Negativos " + contadorDeNegativos + "<br>");
-	document.write("Contador de Ceros " + contadorCeros + "<br>");
+	document.write("Contador de Ceros " + contadorDeCeros + "<br>");
 	document.write("Contador numero pares " + contadorNumeroPares + "<br>");
 	document.write("Diferencia entre positivos y negativos " + diferenciaPositivosYNegativos + "<br>");
 
